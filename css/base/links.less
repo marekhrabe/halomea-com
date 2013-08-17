@@ -1,0 +1,24 @@
+a {
+	color: #3bc3db;
+	position: relative;
+	.transition (~'color 150ms ease, border 150ms ease, opacity 150ms ease');
+	.transform (~'translate3d(0, 0, 0)');
+
+	&:hover {
+		border-bottom-color: transparent;
+		border-bottom: 1px solid #3bc3db;
+	}
+	&:active {
+		.transform (~'translate3d(0, 1px, 0)');
+	}
+}
+
+//**
+// * Target only Firefox via http://stackoverflow.com/questions/952861/targeting-only-firefox-with-css
+//
+
+@-moz-document url-prefix() {
+	a:focus {
+		outline: none !important;
+	}
+}

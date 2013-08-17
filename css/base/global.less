@@ -1,0 +1,52 @@
+@selection_color: #f6c501;
+
+::-moz-selection {
+	background: @selection_color;
+	text-shadow: none;
+	color: #fff;
+}
+
+::selection {
+	background: @selection_color;
+	text-shadow: none;
+	color: #fff;
+}
+
+[hidden-form] {
+	height: 0;
+	overflow: hidden;
+	position: absolute;
+	top: -10px;
+}
+
+p, h2, h2 span, h3, a, input {
+	.user-select (text);
+}
+a {
+	cursor: pointer;
+	* {
+		cursor: pointer;
+	}
+}
+
+*, a.button {
+	.user-select (none);
+	cursor: default;
+}
+
+html, body {
+	min-height: 100%;
+	background-color: #f4f4f4;
+}
+
+html {
+	width: 100%;
+}
+
+img {
+	pointer-events: none;
+}
+
+// omgwtfbbq
+body { -webkit-animation: bugfix infinite 1s; }
+@-webkit-keyframes bugfix { from { padding: 0; } to { padding: 0; } }
