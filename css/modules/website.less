@@ -151,7 +151,25 @@ footer {
     height: 100%;
     pointer-events: none;
     opacity: 0;
+    padding-top: 200px;
     .transition (1s);
+
+    > * {
+        width: 600px;
+        margin: 0 auto 20px;
+        color: #fff;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 34px;
+        text-transform: uppercase;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: normal;
+    }
 
     &.on {
         opacity: .8;
