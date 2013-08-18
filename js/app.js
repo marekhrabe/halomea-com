@@ -1,4 +1,4 @@
-var _gaq=[['_setAccount','UA-12089088-1'],['_trackPageview']];
+var _gaq=[['_setAccount','UA-43255070-1'],['_trackPageview']];
 
 window.onload = function () {
     document.body.classList.add('loaded');
