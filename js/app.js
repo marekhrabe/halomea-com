@@ -36,6 +36,7 @@ var quotes = [
 'Viděl jsi, co dal Jackie na Dribble?',
 'Viděl jsi, co dal Charlie na Dribble?',
 'Viděl jsi, co dal Musho na Dribble?',
+'Viděl jsi, co dal Štefo na Dribble?',
 'Já nevim, nedával jsem pozor',
 'Nejde mi dribbble',
 'Nechci do Dishe, jdem do Moodu',
@@ -91,6 +92,7 @@ var quotes = [
 'Jdu se projít kolem bloku',
 'Ne, pivo fakt ne.',
 'V Oříšku nemaj mrazák',
+'Co je, Štefaaaano!',
 ];
 document.getElementById('vuit').addEventListener('click', function () {
     _gaq.push(['_trackEvent', 'Button', 'Pressed', 'Just Vu It']);
