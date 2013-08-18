@@ -90,6 +90,7 @@ var quotes = [
 'Je mi špatně',
 'Jdu se projít kolem bloku',
 'Ne, pivo fakt ne.',
+'V Oříšku nemaj mrazák',
 ];
 document.getElementById('vuit').addEventListener('click', function () {
     _gaq.push(['_trackEvent', 'Button', 'Pressed', 'Just Vu It']);
