@@ -1,0 +1,32 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<title>HaloMea.com</title>
+
+<!--
+    May The Source be with you!
+-->
+</head>
+<body>
+
+<input placeholder="Quote">
+<button>Add</button>
+<p></p>
+
+<script src="https://cdn.firebase.com/v0/firebase.js"></script>
+<script>
+var input = document.querySelector('input');
+var p = document.querySelector('p');
+document.querySelector('button').addEventListener('click', function () {
+    if (!input.value) {
+        return;
+    }
+    new Firebase('https://halomea.firebaseio.com/').push(input.value);
+    input.value = '';
+    p.innerHTML = 'OK';
+    setTimeout(function () {
+        p.innerHTML = '';
+    }, 2000);
+});
+</script>
