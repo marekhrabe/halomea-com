@@ -94,6 +94,14 @@ var quotes = [
 'V Oříšku nemaj mrazák',
 'Co je, Štefaaaano!',
 ];
+
+new Firebase('https://halomea.firebaseio.com/').on('value', function (data) {
+    var q = data.val();
+    for (var i in q) {
+        quotes.push(q[i]);
+    }
+});
+
 document.getElementById('vuit').addEventListener('click', function () {
     _gaq.push(['_trackEvent', 'Button', 'Pressed', 'Just Vu It']);
     if (animating) {
