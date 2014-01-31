@@ -3,30 +3,50 @@
 <head>
 <meta charset="utf-8">
 <title>HaloMea.com</title>
-
+<link rel="stylesheet" href="../css/main.css">
 <!--
     May The Source be with you!
 -->
+<script src="//use.typekit.net/oda7frm.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-
-<input placeholder="Quote">
-<button>Add</button>
-<p></p>
+<ul id="history"></ul>
+<input placeholder="Write a Quote" autofocus>
 
 <script src="https://cdn.firebase.com/v0/firebase.js"></script>
 <script>
 var input = document.querySelector('input');
-var p = document.querySelector('p');
-document.querySelector('button').addEventListener('click', function () {
+var history = document.getElementById('history');
+var save = function () {
     if (!input.value) {
         return;
     }
     new Firebase('https://halomea.firebaseio.com/').push(input.value);
+    history.innerHTML += '<li>' + input.value + '</li>';
     input.value = '';
-    p.innerHTML = 'OK';
-    setTimeout(function () {
-        p.innerHTML = '';
-    }, 2000);
+};
+input.addEventListener('keydown', function (e) {
+    if (e.keyCode === 13) {
+        save();
+    }
 });
 </script>
+<style>
+body {
+    margin: 50px;
+    color: #111;
+    text-transform: uppercase;
+    font-size: 53px;
+}
+ul {
+    margin-bottom: 50px;
+}
+input {
+    width: 100%;
+    font-size: 53px;
+    text-transform: uppercase;
+    color: #111;
+}
+</style>
+</body>
